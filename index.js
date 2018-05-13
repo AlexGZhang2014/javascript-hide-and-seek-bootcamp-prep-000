@@ -22,7 +22,7 @@ function deepestChild() {
       return parent;
     }
   }
-  if (Array.isArray(parent)) {
+  if (typeof parent.innerHTML !== 'string') {
     sub.push(parent);
   }
   parent = sub.shift();
