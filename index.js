@@ -18,8 +18,8 @@ function deepestChild() {
   let current = document.querySelector('div#grand-node');
   let next = [];
   while (current) {
-    if (typeof current === "string") {
-      return current
+    if (typeof current.innerHTML === "string") {
+      return current.innerHTML;
     }
     if (Array.isArray(current)) {
       for (let i = 0; i < current.length; i++) {
