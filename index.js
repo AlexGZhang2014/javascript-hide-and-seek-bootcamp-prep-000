@@ -18,7 +18,7 @@ function deepestChild() {
   let parent = document.querySelector('div#grand-node');
   let sub = [];
   while (parent) {
-    if (parent.innerHTML !== undefined) {
+    if (typeof parent.innerHTML === 'string') {
       return parent;
     }
   }
